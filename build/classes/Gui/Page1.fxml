@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="748.0" prefWidth="1148.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane prefHeight="748.0" prefWidth="1148.0">
+         <content>
+            <AnchorPane id="AnchorPane" fx:id="content" onDragDetected="#DisplayFeatures" prefHeight="1658.0" prefWidth="1673.0">
+               <children>
+                  <TableView fx:id="tableview" layoutX="146.0" layoutY="220.0" prefHeight="216.0" prefWidth="297.0" stylesheets="@../Css/fullpackstyling.css">
+                     <columns>
+                        <TableColumn fx:id="firstName" prefWidth="156.0" text="ID_Backlog_product" />
+                        <TableColumn fx:id="lastName" prefWidth="133.0" text="Product backlog" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="pbacklognom" layoutX="190.0" layoutY="165.0" prefHeight="31.0" prefWidth="209.0" promptText="saisissez le nom du backlog" stylesheets="@../Css/fullpackstyling.css" />
+                  <Label layoutX="28.0" layoutY="170.0" stylesheets="@../Css/fullpackstyling.css" text="Nom Product Backlog" />
+                  <Button layoutX="445.0" layoutY="164.0" mnemonicParsing="false" onAction="#addProduct_backlog" prefHeight="31.0" prefWidth="81.0" styleClass="button5" stylesheets="@../Css/fullpackstyling.css" text="Ajouter " />
+                  <Button layoutX="205.0" layoutY="459.0" mnemonicParsing="false" onAction="#displayBacklog" styleClass="button5" stylesheets="@../Css/fullpackstyling.css" text="afficher les product backlog" />
+                  <TableView fx:id="tableviewtheme" layoutX="712.0" layoutY="235.0" prefHeight="216.0" prefWidth="322.0" stylesheets="@../Css/fullpackstyling.css">
+                     <columns>
+                        <TableColumn fx:id="numtheme" prefWidth="96.0" text="Num Theme" />
+                        <TableColumn fx:id="nomtheme" prefWidth="327.0" text="Nom Theme" />
+                        <TableColumn fx:id="JoursTotal" prefWidth="59.0" text="Total_Estamtion_jours" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btn5" layoutX="802.0" layoutY="459.0" mnemonicParsing="false" onAction="#DisplayTheme" prefHeight="31.0" prefWidth="142.0" styleClass="button5" stylesheets="@../Css/fullpackstyling.css" text="Affiche les theme" />
+                  <TableView fx:id="tableviewfeature" layoutX="213.0" layoutY="1121.0" prefHeight="289.0" prefWidth="687.0" stylesheets="@../Css/fullpackstyling.css">
+                     <columns>
+                        <TableColumn fx:id="numf" prefWidth="120.0" text="Num Feature" />
+                        <TableColumn fx:id="nomf" prefWidth="169.0" text="Nom Feature" />
+                        <TableColumn fx:id="user" prefWidth="116.0" text="id_user_respensible" />
+                        <TableColumn fx:id="totaljours" prefWidth="154.0" text="Estimation_fonctinalite_Jours" />
+                        <TableColumn fx:id="statue" prefWidth="122.0" text="Statue" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btn8" layoutX="443.0" layoutY="1410.0" mnemonicParsing="false" onAction="#displayedFeatures" styleClass="button5" stylesheets="@../Css/fullpackstyling.css" text="affiche fonctionalite" />
+                  <TableView fx:id="tableviewUstory" layoutX="213.0" layoutY="566.0" prefHeight="338.0" prefWidth="660.0" stylesheets="@../Css/fullpackstyling.css">
+                     <columns>
+                        <TableColumn fx:id="numu" prefWidth="89.0" text="Num User story" />
+                        <TableColumn fx:id="desc" prefWidth="200.0" text="Description user_story" />
+                        <TableColumn fx:id="doing" prefWidth="114.0" text="Doing" />
+                        <TableColumn fx:id="totaljours1" prefWidth="167.0" text="Estimation_userStoryJours" />
+                        <TableColumn fx:id="priority" prefWidth="78.0" text="Priority" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="460.0" layoutY="904.0" mnemonicParsing="false" onAction="#DisplayUserStory" styleClass="button5" stylesheets="@../Css/fullpackstyling.css" text="Affiche user story" />
+                  <Button layoutX="654.0" layoutY="1410.0" mnemonicParsing="false" onAction="#DisplayChart" styleClass="button5" stylesheets="@../Css/fullpackstyling.css" text="fonctionalite progression " />
+                  <Button layoutX="597.0" layoutY="167.0" mnemonicParsing="false" onAction="#addThemee" prefHeight="40.0" prefWidth="124.0" styleClass="button5" stylesheets="@../Css/fullpackstyling.css" text="Ajout theme" />
+                  <Label layoutX="753.0" layoutY="176.0" text="LaNom theme " />
+                  <TextField fx:id="nomThemea" layoutX="873.0" layoutY="171.0" stylesheets="@../Css/fullpackstyling.css" />
+                  <Button layoutX="245.0" layoutY="1410.0" mnemonicParsing="false" onAction="#addFeature" prefHeight="31.0" prefWidth="158.0" styleClass="button5" stylesheets="@../Css/fullpackstyling.css" text="Ajout Fonctionalite" />
+                  <Label layoutX="282.0" layoutY="1512.0" text="Le nom du Fonctionalite" />
+                  <TextField fx:id="featureName" layoutX="485.0" layoutY="1518.0" stylesheets="@../Css/fullpackstyling.css" />
+                  <Button layoutX="264.0" layoutY="904.0" mnemonicParsing="false" onAction="#addUserStory" prefHeight="31.0" prefWidth="142.0" styleClass="button5" stylesheets="@../Css/fullpackstyling.css" text="Ajout User Story" />
+                  <Label layoutX="225.0" layoutY="964.0" prefHeight="21.0" prefWidth="105.0" stylesheets="@../Css/fullpackstyling.css" text="Description" />
+                  <Label layoutX="230.0" layoutY="1005.0" stylesheets="@../Css/fullpackstyling.css" text="Priority" />
+                  <TextField fx:id="descriptionn" layoutX="341.0" layoutY="959.0" stylesheets="@../Css/fullpackstyling.css" />
+                  <TextField fx:id="priorityy" layoutX="341.0" layoutY="1000.0" stylesheets="@../Css/fullpackstyling.css" />
+                  <Label layoutX="186.0" layoutY="1039.0" stylesheets="@../Css/fullpackstyling.css" text="Estimation_US_Jours" />
+                  <TextField fx:id="EstimationUS" layoutX="341.0" layoutY="1039.0" stylesheets="@../Css/fullpackstyling.css" />
+                  <Button layoutX="633.0" layoutY="904.0" mnemonicParsing="false" onAction="#updateDoing" styleClass="button5" stylesheets="@../Css/fullpackstyling.css" text="Update Progressive" />
+                  <Label layoutX="555.0" layoutY="975.0" prefHeight="21.0" prefWidth="81.0" stylesheets="@../Css/fullpackstyling.css" text="Progression" />
+                  <TextField fx:id="upDoing" layoutX="653.0" layoutY="970.0" prefHeight="31.0" prefWidth="153.0" stylesheets="@../Css/fullpackstyling.css" />
+                  <PieChart fx:id="pieChart" layoutX="368.0" layoutY="1578.0" prefHeight="264.0" prefWidth="285.0" title="Le Progression Par jours" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>

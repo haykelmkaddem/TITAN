@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="429.0" prefWidth="382.0" style="-fx-background-color: #BFD9F2;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.AddTacheController">
+   <stylesheets>
+      <URL value="@sprint.css" />
+   </stylesheets>
+   <children>
+      <Label fx:id="btnAddTache" layoutX="27.0" layoutY="14.0" text="AJOUTER TACHE" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="43.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnExit" layoutX="213.0" layoutY="361.0" mnemonicParsing="false" onAction="#exit" prefHeight="32.0" prefWidth="101.0" style="-fx-background-color: #7B3F9F;" text="Annuler" textFill="WHITE" />
+      
+      <Label layoutX="45.0" layoutY="99.0" text="Nom Tache :" />
+      <Label layoutX="45.0" layoutY="154.0" text="Priorite:" />
+      <Label layoutX="45.0" layoutY="254.0" text="Estimation :" />
+      <Label layoutX="45.0" layoutY="207.0" text="Description :" />
+      <TextField fx:id="fieldNomTache" layoutX="144.0" layoutY="94.0" promptText="Nom Tache..." style="-fx-border-color: #7B3F9F;" />
+      <TextField fx:id="FieldPriorite" layoutX="144.0" layoutY="149.0" promptText="Priorite..." style="-fx-border-color: #7B3F9F;" />
+      <TextField fx:id="fieldDescription" layoutX="144.0" layoutY="202.0" promptText="Description..." style="-fx-border-color: #7B3F9F;" />
+      <TextField fx:id="fieldCreatedBy" layoutX="144.0" layoutY="249.0" promptText="Estimation..." style="-fx-border-color: #7B3F9F;" />
+      <Label layoutX="45.0" layoutY="294.0" text="Status :" />
+      <TextField fx:id="fieldCreatedBy1" layoutX="144.0" layoutY="289.0" promptText="TODO..." style="-fx-border-color: #7B3F9F;" />
+   </children>
+</AnchorPane>

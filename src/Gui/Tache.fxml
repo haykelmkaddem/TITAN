@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="498.0" prefWidth="600.0" style="-fx-background-color: #BFD9F2;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.TacheController">
+   <stylesheets>
+      <URL value="@sprint.css" />
+   </stylesheets>
+   <children>
+      <Label layoutX="221.0" layoutY="14.0" text="TACHES" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="43.0" />
+         </font>
+      </Label>
+      <TableView fx:id="rowTaches" layoutX="38.0" layoutY="147.0" prefHeight="257.0" prefWidth="548.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="14.0">
+         <columns>
+            <TableColumn fx:id="colIdTache" onEditStart="#loadTaches" prefWidth="63.0" text="ID" />
+            <TableColumn fx:id="colpriorite" onEditStart="#loadTaches" prefWidth="125.0" text="Priorite" />
+            <TableColumn fx:id="colnom_tache" onEditStart="#loadSprints" prefWidth="101.0" text="Nom du tache" />
+            <TableColumn fx:id="colDescription" minWidth="0.0" onEditStart="#loadSprints" prefWidth="103.0" text="Description" />
+            <TableColumn fx:id="colestimation" onEditStart="#loadTaches" prefWidth="71.0" text="estimation" />
+            <TableColumn prefWidth="75.0" text="Status" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnUpdate" layoutX="245.0" layoutY="432.0" mnemonicParsing="false" onAction="#updateTache" prefHeight="32.0" prefWidth="101.0" style="-fx-background-color: #7B3F9F;" text="Modifier" textFill="WHITE" />
+      <Button fx:id="btnDelete" layoutX="411.0" layoutY="432.0" mnemonicParsing="false" onAction="#deleteTache" prefHeight="32.0" prefWidth="101.0" style="-fx-background-color: #7B3F9F;" text="Supprimer" textFill="WHITE" />
+      <Button layoutX="414.0" layoutY="69.0" mnemonicParsing="false" onAction="#serchTache" style="-fx-background-color: #7B3F9F;" text="Rechercher" textFill="WHITE" />
+      <TextField fx:id="fieldRechId" layoutX="102.0" layoutY="72.0" promptText="ID..." style="-fx-border-color: #7B3F9F;" />
+      <TextField fx:id="fieldRechNom" layoutX="254.0" layoutY="72.0" promptText="Nom du tache ..." style="-fx-border-color: #7B3F9F;" />
+      <Button fx:id="btnAdd" layoutX="77.0" layoutY="432.0" mnemonicParsing="false" onAction="#addTache" prefHeight="32.0" prefWidth="101.0" style="-fx-background-color: #7B3F9F;" text="Ajouter" textFill="WHITE" />
+     
+   </children>
+</AnchorPane>
